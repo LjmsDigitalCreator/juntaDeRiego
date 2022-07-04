@@ -17,8 +17,8 @@
 
   <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
-      <h2>Welcome to <span>HeroBiz</span></h2>
-      <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
+      <h2><span>Belisario Quevedo</span></h2>
+      <p>Formulario de ingreso al sistema</p>
       
       <div class="container contact">
 
