@@ -5,70 +5,54 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Junta de Riego Belisario Quevedo</title>
-  <?php
-    include('../components/head.php');
-  ?>
+  <title>Riego Belisario</title>
+
+  <?php include('../components/head.php') ?>
+
 </head>
 
 <body>
 
-<?php
-    include('../components/header.php');
-  ?>
+  <?php include('../components/header.php') ?>
 
-  <section id="hero2" class="d-flex align-items-center">
+  <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
+      <h2>Informacio&#769;n de los <span>clientes</span></h2>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1 class="text-white text-center">Solicitud de información</h1>
+      <footer id="footer" class="footer">
+        <div class="footer-content">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 footer-newsletter">
+                <p class="text-center text-white">En la casilla que se encuentra debajo, coloque el nu&#769;mero de ce&#769;dula para obtener la informacio&#769;n del cliente</p>
+                <div class="justify-content-center">
+                  <input type="text" class="inputSearch" name="identity" id="identity"><button class="btnSearch" onclick="Search();">Consultar</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </footer>
 
+      <footer id="footer" class="footer mt-3">
+        <div class="footer-content">
+          <div class="container">
+            <div class="row">
+              <h4 class="text-center">Datos del cliente</h4>
+              <div class="col-lg-12 col-md-12 footer-newsletter" id="divInformation">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
   </section>
 
-  <footer id="footer">
-
-<div class="footer-newsletter">
-<div class="container">
-    <div class="row justify-content-center">
-    <div class="col-lg-6">
-        <h4>Ingrese el número de cédula del cliente</h4>
-        <p>Con el número de cédula podremos obtener al información de nuestra base de datos</p>
-        <div>
-          <input class="form-control" type="text" id="identity" name="identity">
-          <button class="btn_search btnSearch" onclick="Search();">Buscar</button>
-        </div>
-    </div>
-    </div>
-</div>
-</div>
-
-</footer>
-
-  <main id="main">
-
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Información del cliente</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6" id="divInformation"></div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
     <?php include('../components/footer.php'); ?>
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <?php include('../components/scripts.php'); ?>
 

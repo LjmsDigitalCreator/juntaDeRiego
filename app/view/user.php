@@ -18,46 +18,59 @@
     include('../components/header.php');
   ?>
 
-  <section id="hero2" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1 class="text-white text-center">Gestio&#769;n de clientes</h1>
-        </div>
-      </div>
-    </div>
-  </section>
-
 <main id="main">
 
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
+<section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
+      <h2 class="text-center">Apartado de gestionamiento de <span>usuarios</span></h2>
+
+      <section id="services" class="services section-bg">
+      <div class="container m-3" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Opciones</h2>
+          <h4 class="text-center">Opciones</h4>
         </div>
 
         <div class="row">
 
-          <div id="view" class="col-xl-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box w-100">
-              <div class="icon"><i class="bx bx-list-ul"></i></div>
-              <h4><button class="btnAlpha" onclick="BringInformationUser();">Ver</button></h4>
+        <div id="view" class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="600">
+            <div class="service-item">
+              <div class="img">
+                <img src="../../public/assets/img/services-5.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-calendar4-week"></i>
+                </div>
+                  <h3>Ver clientes</h3>
+                </a>
+                <p>Haga clic aqui&#769; para poder ver la lista de los clientes registrados</p>
+              </div>
             </div>
           </div>
 
-          <div id="form" class="col-xl-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box w-100">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><button class="btnAlpha">Crear</button></h4>
+          <div id="form" class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700">
+            <div class="service-item">
+              <div class="img">
+                <img src="../../public/assets/img/services-6.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-chat-square-text"></i>
+                </div>
+                  <h3>Registrar</h3>
+                </a>
+                <p>Haga clic aqui&#769; para poder registrar nuevos clientes en el aplicativo</p>
+              </div>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section>
+</section>
+    </div>
+  </section>
     
     <section id="tables" class="contact">
         <div class="container2" data-aos="fade-up">
@@ -114,7 +127,7 @@
             <input type="password" class="form-control" name="password" id="password" required>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-12">
             <label for="name">Primer apellido</label>
             <select class="form-control" name="rol" id="rol" require>
               <option value="root">Super usuario</option>
@@ -211,7 +224,7 @@
                           <input type="password" class="form-control" name="password" id="password" value="" required>
                       </div>
 
-                      <div class="form-group col-md-6">
+                      <div class="form-group col-md-12">
                           <label for="name">Primer apellido</label>
                           <select class="form-control" name="rol" id="rol" require>
                             <option value="${info[i]['ROL']}" selected>${rol}</option>
