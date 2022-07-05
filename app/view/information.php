@@ -15,42 +15,58 @@
 
   <?php include('../components/header.php') ?>
 
-  <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
-      <h2>Informacio&#769;n de los <span>clientes</span></h2>
+  <section id="hero" class="hero d-flex align-items-center">
 
-      <footer id="footer" class="footer">
-        <div class="footer-content">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-lg-12 col-md-12 footer-newsletter">
-                <p class="text-center text-white">En la casilla que se encuentra debajo, coloque el nu&#769;mero de ce&#769;dula para obtener la informacio&#769;n del cliente</p>
-                <div class="justify-content-center">
-                  <input type="text" class="inputSearch" name="identity" id="identity"><button class="btnSearch" onclick="Search();">Consultar</button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <footer id="footer" class="footer mt-3">
-        <div class="footer-content">
-          <div class="container">
-            <div class="row">
-              <h4 class="text-center">Datos del cliente</h4>
-              <div class="col-lg-12 col-md-12 footer-newsletter" id="divInformation">
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </footer>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 d-flex flex-column justify-content-center">
+      <h1 data-aos="fade-up" class="text-center">Bu&#769;squeda de informacio&#769;n</h1>
     </div>
-  </section>
+  </div>
+</div>
+
+</section>
+
+  <footer id="footer" class="footer col-12">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h4>Ingrese la ce&#769;dula</h4>
+          </div>
+          <div class="col-lg-6">
+              <input type="text" name="identity" id="identity">
+              <button class="w-3 m-auto" onclick="Search();">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section id="pricing" class="pricing">
+
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Informacio&#769;n del cliente</p>
+        </header>
+
+        <div class="row gy-4 aos-init aos-animate" data-aos="fade-left">
+
+          <div class="col-lg-12 col-md-12 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <img src="../../public/assets/img/pricing-free.png" class="img-fluid" alt="">
+              <ul id="divInformation">
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
     <?php include('../components/footer.php'); ?>
 
@@ -83,17 +99,17 @@
 
                     divs += `
                       <ul>
-                        <li><i class="ri-check-double-line"></i><strong>Nombre: </strong>${info[i]['NAME']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Segundo Nombre: </strong>${info[i]['SECOND_NAME']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Apellido: </strong>${info[i]['LAST_NAME']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Segundo Apellido: </strong>${info[i]['SECOND_LAST_NAME']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Ce&#769;dula: </strong>${info[i]['IDENTITY']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Correo electro&#769;nico: </strong>${info[i]['EMAIL']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Celular: </strong>${info[i]['PHONE']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Tele&#769;fono: </strong>${info[i]['ALTER_PHONE']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Direccio&#769;n: </strong>${info[i]['ADDRESS']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Nu&#769;mero del medidor: </strong>${info[i]['METER_NUMBER']}</li>
-                        <li><i class="ri-check-double-line"></i><strong>Monto a pagar: </strong>${info[i]['NEW_AMOUNT']}</li>
+                        <li><strong>Nombre: </strong>${info[i]['NAME']}</li>
+                        <li><strong>Segundo Nombre: </strong>${info[i]['SECOND_NAME']}</li>
+                        <li><strong>Apellido: </strong>${info[i]['LAST_NAME']}</li>
+                        <li><strong>Segundo Apellido: </strong>${info[i]['SECOND_LAST_NAME']}</li>
+                        <li><strong>Ce&#769;dula: </strong>${info[i]['IDENTITY']}</li>
+                        <li><strong>Correo electro&#769;nico: </strong>${info[i]['EMAIL']}</li>
+                        <li><strong>Celular: </strong>${info[i]['PHONE']}</li>
+                        <li><strong>Tele&#769;fono: </strong>${info[i]['ALTER_PHONE']}</li>
+                        <li><strong>Direccio&#769;n: </strong>${info[i]['ADDRESS']}</li>
+                        <li><strong>Nu&#769;mero del medidor: </strong>${info[i]['METER_NUMBER']}</li>
+                        <li><strong>Monto a pagar: </strong>${info[i]['NEW_AMOUNT']}</li>
                       </ul>
                         `;
                     }

@@ -18,57 +18,39 @@
     include('../components/header.php');
   ?>
 
+<section id="hero" class="hero d-flex align-items-center">
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 d-flex flex-column justify-content-center">
+      <h1 data-aos="fade-up" class="text-center">Informacio&#769;n de los medidores</h1>
+    </div>
+  </div>
+</div>
+
+</section>
+
 <main id="main">
 
-<section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
-    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
-      <h2 class="text-center">Apartado de gestionamiento de <span>usuarios</span></h2>
-
-      <section id="services" class="services section-bg">
-      <div class="container m-3" data-aos="fade-up">
-
-        <div class="section-title">
-          <h4 class="text-center">Opciones</h4>
-        </div>
+<section id="services" class="services section-bg m-auto">
+      <div class="container m-auto m-3" data-aos="fade-up">
 
         <div class="row">
 
-        <div id="view" class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="600">
-            <div class="service-item">
-              <div class="img">
-                <img src="../../public/assets/img/services-5.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-calendar4-week"></i>
-                </div>
-                  <h3>Ver clientes</h3>
-                </a>
-                <p>Haga clic aqui&#769; para poder ver la lista de los clientes registrados</p>
-              </div>
+        <div id="view" class="col-lg-4 col-md-6 m-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <h3>Listado de usuarios</h3>
             </div>
           </div>
 
-          <div id="form" class="col-xl-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="700">
-            <div class="service-item">
-              <div class="img">
-                <img src="../../public/assets/img/services-6.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-chat-square-text"></i>
-                </div>
-                  <h3>Registrar</h3>
-                </a>
-                <p>Haga clic aqui&#769; para poder registrar nuevos clientes en el aplicativo</p>
-              </div>
+          <div id="form" class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <h3>Registrar usuario</h3>
             </div>
           </div>
 
         </div>
 
-      </div>
-</section>
     </div>
   </section>
     
@@ -98,7 +80,7 @@
 
             <div class="col-lg-5 d-flex align-items-stretch">
                 <form action="../controller/manageUser.php" id="forms" method="POST" role="form" class="php-email-form">
-                <div class="row" id="formData"></div>
+                <div class="row mb-3" id="formData"></div>
                 <div class="text-center"><button id="btnClient" type="submit">Gestionar Usuario</button></div>
                 </form>
             </div>
