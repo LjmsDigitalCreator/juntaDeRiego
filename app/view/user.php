@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1 class="text-white text-center">Gestio&#769;n de clientes</h1>
+          <h1 class="text-white text-center">Gestio&#769;n de usuarios</h1>
         </div>
       </div>
     </div>
