@@ -28,6 +28,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         case 6:
             echo json_encode(queryBringUserInformationById($_POST['identify']));
             break;
+        case 7:
+            echo json_encode(queryBringFileInformation());
+            break;
+        case 8:
+            echo json_encode(queryBringFileInformationByName($_POST['identify']));
+            break;
         default:
             echo json_encode(queryBringClientInformation());
             break;

@@ -69,33 +69,33 @@ function queryBringClientInformationById($identify){
     return $data;
 }
 
-function queryBringFileInformation($type){
+// function queryBringFileInformation($type){
 
-    include('connection.php');
+//     include('connection.php');
 
-    $query = $mysqli->query("SELECT
-        ID_USER,
-        NAME,
-        DIR,
-        TYPE
-    FROM FILES
-    WHERE TYPE = '$type'");
+//     $query = $mysqli->query("SELECT
+//         ID_USER,
+//         NAME,
+//         DIR,
+//         TYPE
+//     FROM FILES
+//     WHERE TYPE = '$type'");
 
-    $data = array();
+//     $data = array();
 
-    while ($info = $query->fetch_object()) {
-        array_push($data, [
-            'ID_USER'=>$info->ID_USER,
-            'NAME'=>$info->NAME,
-            'DIR'=>$info->DIR,
-            'TYPE'=>$info->TYPE
-        ]);
-    }
+//     while ($info = $query->fetch_object()) {
+//         array_push($data, [
+//             'ID_USER'=>$info->ID_USER,
+//             'NAME'=>$info->NAME,
+//             'DIR'=>$info->DIR,
+//             'TYPE'=>$info->TYPE
+//         ]);
+//     }
 
-    $mysqli->close();
+//     $mysqli->close();
 
-    return $data;
-}
+//     return $data;
+// }
 
 function queryBringClientInformationByMeter(){
 
@@ -258,6 +258,55 @@ function queryBringUserInformationById($identify){
             'ID_USER'=>$info->ID_USER,
             'USER'=>$info->USER,
             'ROL'=>$info->ROL
+        ]);
+    }
+
+    $mysqli->close();
+
+    return $data;
+}
+
+function queryBringFileInformation(){
+
+    include('connection.php');
+
+    $query = $mysqli->query("SELECT
+        NAME,
+        DIR
+    FROM FILES
+    ");
+
+    $data = array();
+
+    while ($info = $query->fetch_object()) {
+        array_push($data, [
+            'NAME'=>$info->NAME,
+            'DIR'=>$info->DIR
+        ]);
+    }
+
+    $mysqli->close();
+
+    return $data;
+}
+
+function queryBringFileInformationByName($identify){
+
+    include('connection.php');
+
+    $query = $mysqli->query("SELECT
+        NAME,
+        DIR
+    FROM FILES
+    WHERE NAME LIKE '%$identify%'
+    ");
+
+    $data = array();
+
+    while ($info = $query->fetch_object()) {
+        array_push($data, [
+            'NAME'=>$info->NAME,
+            'DIR'=>$info->DIR
         ]);
     }
 

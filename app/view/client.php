@@ -98,6 +98,14 @@
 
   <script>
 
+li_menu.addEventListener("click", () => {
+  if (navegator.getAttribute("class") == "navbar") {
+    navegator.setAttribute("class", "navbar navbar-mobile");
+  } else {
+    navegator.setAttribute("class", "navbar");
+  }
+});
+
       let inputs = `
         <div class="form-group col-md-6">
             <label for="name">Primer nombre</label>

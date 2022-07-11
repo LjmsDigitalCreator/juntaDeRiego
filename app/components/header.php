@@ -5,6 +5,7 @@ session_start();
 $menu = '
   <li><a class="nav-link scrollto" href="information.php">Buscar informacio&#769;n</a></li>
   <li><a class="nav-link scrollto" href="client.php">Informacio&#769;n de los Clientes</a></li>
+  <li><a class="nav-link scrollto" href="files.php">Almacenamiento de documentos</a></li>
 ';
 
 if($_SESSION['rol'] == 'annotator'){
@@ -35,7 +36,7 @@ echo '
     <ul>
       '. $menu .'
     </ul>
-    <i class="bi bi-list mobile-nav-toggle"></i>
+    <i id="li-menu" class="bi bi-list mobile-nav-toggle"></i>
   </nav>
 
 </div>
